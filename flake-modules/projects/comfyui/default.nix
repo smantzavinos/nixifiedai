@@ -112,7 +112,12 @@
     {
       checks.comfyui = pkgs.callPackage ./vm-test { nixosModule = inputs.self.nixosModules.comfyui; };
       packages = {
-        comfyui-nvidia = nvidiaPkgs.comfyuiPackages.comfyui // {
+        comfyui-nvidia = nvidiaPkgs.comfyuiPackages.comfyui.override {
+          withCustomNodes = with nvidiaPkgs.comfyuiPackages; [
+            comfyui-kjnodes
+            comfyui-impact-pack
+          ];
+        } // {
           passthru = nvidiaPkgs.comfyuiPackages.comfyui.passthru // {
             inherit (nvidiaPkgs)
               customCustomNodesPins

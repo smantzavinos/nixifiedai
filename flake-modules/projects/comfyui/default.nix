@@ -116,8 +116,8 @@
           withCustomNodes = with nvidiaPkgs.comfyuiPackages; [
             comfyui-kjnodes
             comfyui-impact-pack
-            comfyui-res4lyf
             comfyui-rgthree
+            ComfyUI-Image-Saver
           ];
         } // {
           passthru = nvidiaPkgs.comfyuiPackages.comfyui.passthru // {

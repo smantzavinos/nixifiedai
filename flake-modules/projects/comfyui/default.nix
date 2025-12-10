@@ -117,6 +117,7 @@
             comfyui-kjnodes
             comfyui-impact-pack
             comfyui-res4lyf
+            comfyui-rgthree
           ];
         } // {
           passthru = nvidiaPkgs.comfyuiPackages.comfyui.passthru // {
